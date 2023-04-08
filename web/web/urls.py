@@ -25,4 +25,5 @@ urlpatterns = [
 urlpatterns += [
     path('answer/', views.answer, name='answer-call-server'),
     path('test/', views.test, name='dummy-url-server'),
+    path('book-auto/',views.book_auto,name='book-auto')
 ]
