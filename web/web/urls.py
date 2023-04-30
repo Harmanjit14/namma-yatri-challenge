@@ -25,5 +25,18 @@ urlpatterns = [
 urlpatterns += [
     path('answer/', views.answer, name='answer-call-server'),
     path('test/', views.test, name='dummy-url-server'),
-    path('book-auto/',views.book_auto,name='book-auto')
+    path('book-auto/',views.book_auto,name='book-auto'),
+    path('hangup-call/',views.hangup, name='hangup-call-server')
+]
+
+
+urlpatterns +=[
+    path('sms/', views.reply_sms, name='inbound-sms'),
+    path('sms-failiure/', views.reply_sms_fail, name='inbound-sms-fail'),
+]
+
+urlpatterns+=[
+    path('get-user/',views.get_user,name="get-user"),
+    path('get-location/',views.get_location,name='get-Location'),
+    path('test-data/',views.test_data,name='test-data')
 ]
